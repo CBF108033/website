@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,300;1,500;1,700&family=Noto+Sans+TC:wght@300;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -309,6 +311,108 @@ main .content_R ul{
     font-weight: 600;
 }
 
+.ProcessTitle{
+    font-size: 1.6em;
+    color: white;
+    padding: 0 5%;
+}
+.ProcessTitle span{
+    font-size: 2.7rem;
+}
+
+.number{
+    font-family: 'Josefin Slab', serif;
+    font-weight: 300;
+}
+
+#process .ProcessPicture{
+    width: 100%;
+    grid-column-start: 1;
+    text-align: center;
+    margin: auto;
+    padding: 5% 0;
+}
+
+#process{
+    width: 100%;
+}
+
+#processImg{
+    width: 50%;
+}
+
+.processContent{
+    padding: 5% 0;
+}
+
+.modelTrainingItem > p{
+    grid-column-start: 2;
+    margin: 0;
+    padding: 1%;
+}
+
+.modelTrainingItem{
+    background-color: rgb(254 254 255 / 36%);
+    border-radius: 8px;
+    /* padding: 1%; */
+    font-size: 1.5em;
+    width: 70%;
+    text-align: center;
+    border: 2px dotted #7b7b7b;
+    /* margin-top: 1px; */
+    margin: 3px auto;
+    display: grid;
+    grid-template-columns: 15% 75% 10%;
+}
+.modelTrainingItem span{
+    color: #ffffff4d;
+    background-color: #ffffff14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    font-family: 'Josefin Slab', serif;
+}
+.modelTrainingItem > span:nth-child(1){
+    color: #554d4d;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.modelTrainingItemDetail{
+    display:none;
+    margin:0px;
+    padding:5px;
+    text-align:center;
+    background: linear-gradient(180deg, #92a7b1, 10px, transparent);
+    color: #0b0b0b;
+    grid-template-columns: 100%;
+    /* grid-column-start: 2; */
+    /* display: block; */
+    grid-column: 1 / span 3;
+    border-radius: 0 0 8px 8px;
+    font-size: 0.8em;
+    text-align: left;
+    padding: 15px 30px;
+}
+.modelTrainingItemDetail .pic{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+.modelTrainingItemDetail .pic img{
+    /* width: 45%; */
+    height: 80px;
+}
+#CNN_structure img{
+    width: 100%;
+    height: auto;
+}
+#live_training img{
+    height: auto;
+    width: 80%;
+}
+
 /*頁尾*/
 footer p,
 footer pre {
@@ -396,9 +500,11 @@ footer h4 {
     }
 
     #technology{
+        FONT-WEIGHT: 100;
         grid-template-columns: 100%;
         column-gap: 30px;
-        margin-top: 80px;
+        margin-top: 50px;
+        margin-bottom: 20%;
     }
 
     #CV_MP{
@@ -415,6 +521,18 @@ footer h4 {
 
     .TechText .TechTitle{
         text-align: center;
+    }
+
+    .ProcessTitle{
+        margin-top: 15%;
+    }
+
+    #process .ProcessPicture{
+        margin-top: 5%;
+    }
+
+    #processImg{
+        width: 90%;
     }
 
 }

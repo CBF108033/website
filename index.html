@@ -1,457 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="參考網頁"
+        href="https://zh.wix.com/website-template/view/html/2898?originUrl=https%3A%2F%2Fzh.wix.com%2Fwebsite%2Ftemplates%2Fhtml%2Fmost-popular%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D14201501511%5E128579468107%26experiment_id%3D%5E%5E538086583136%5E%5E_DSA%26gclid%3DCj0KCQjwyt-ZBhCNARIsAKH11761hlv6KtS7S2x-R5NgH3yOs-yywcAtvW1v69Z1BGdIIAch5OSG2LcaAnn_EALw_wcB&tpClick=view_button&esi=3f1ef591-cbf6-4d4b-9774-858e3f369892">
+    <link rel="參考網頁"
+        href="https://zh.wix.com/website-template/view/html/2855?originUrl=https%3A%2F%2Fzh.wix.com%2Fwebsite%2Ftemplates%2Fhtml%2Fmost-popular%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D14201501511%5E128579468107%26experiment_id%3D%5E%5E538086583136%5E%5E_DSA%26gclid%3DCj0KCQjwyt-ZBhCNARIsAKH11761hlv6KtS7S2x-R5NgH3yOs-yywcAtvW1v69Z1BGdIIAch5OSG2LcaAnn_EALw_wcB&tpClick=view_button&esi=3f1ef591-cbf6-4d4b-9774-858e3f369892">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        .container{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .item{
-            width: 33vw;
-            height: 100vh;
-			overflow: hidden;
-        }
-        .work_video{
-            position: absolute;
-            width: 100%;
-            height: 47%;
-            /* top: 0%; */
-            /* left: 21%; */
-            z-index: -1;
-            transform: scale(2.4);
-        }
-        .tip{
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            color: rgba(255, 255, 255, .7);
-            font-size: 1em;
-        }
-        #top_square .tip{
-            transform: rotate(-10deg);
-            left: 30%;
-            top: 46%;
-        }
-        #mid_square .tip{
-            transform: rotate(-10deg);
-            left: 27%;
-            top: 51.2%;
-            color: rgba(255, 255, 255, .3);
-        }
-        #bottom_square .tip{
-            transform: rotate(-10deg);
-            left: 32%;
-            top: 46%;
-        }
-        #top_square{
-            position: relative;
-            /* background-color: #cf7d13; */
-            background:linear-gradient(170deg, #ffcc00 50%, #221a1a 50%, transparent 50%),url("https://picsum.photos/1200/600?random=10") right center / auto 100%;
-            /* background:linear-gradient(170deg, #ffcc00 50%, #221a1a 50%, transparent 50%); */
-            background-repeat: no-repeat;
-            transition: .6s;
-        }
-        #mid_square{
-            position: relative;
-            /* background-color: #1374cf; */
-            /* background:linear-gradient(350deg, #221a1a 50%, #2f369f 50%, transparent 50%),url("https://picsum.photos/1200/600?random=20") right center / auto 100%; */
-            background:linear-gradient(350deg, #221a1a 50%, #2f369f 50%, transparent 50%);
-            background-repeat: no-repeat;
-            transition: .6s;
-        }
-        #bottom_square{
-            position: relative;
-            width: 34vw;
-            /* background-color: #cf1313; */
-            background:linear-gradient(170deg, #a0d352 50%, #bd4042 50%, transparent 50%),url("https://picsum.photos/1200/600?random=30") right center / auto 100%;
-            background-repeat: no-repeat;
-            transition: .6s;
-        }
-        #top_square:hover::before{
-            content: "";
-            width: 100%;
-            height: 100vh;
-            top: -1px;
-            position: absolute;
-            background-color: rgba(255, 255, 255, .9);
-        }
-        #mid_square:hover::before{
-            content: "";
-            width: 100%;
-            height: 100vh;
-            top: -1px;
-            position: absolute;
-            background-color: rgba(255, 255, 255, .9);
-        }
-        #bottom_square:hover::before{
-            content: "";
-            width: 100%;
-            height: 100vh;
-            top: -1px;
-            position: absolute;
-            background-color: rgba(255, 255, 255, .9);
-        }
-        .banner-txt{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            padding: 5vh 10% 3%;;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center; */
-            /* align-items: center; */
-        }
-        #topTxt{
-            position: absolute;
-            color: rgb(89, 53, 53);
-            transition: .6s ,color .4s linear;
-            bottom: 10px;
-        }
-        #topTxt:hover {
-            color:#0f0f0f;
-            /* background-color: rgba(255, 255, 255, .6); */
-            transform: translateY(10px);
-        }
-        #topTxt:hover .detail h2{
-            opacity: 1;
-        }
-        #topTxt:hover .detail ul{
-            opacity: 1;
-        }
-        #midTxt{
-            position: absolute;
-            padding: 3% 10% 5vh;
-            /* left: 33%; */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            color: #adadad;
-            transition: .6s ,color .4s linear;
-            bottom: 10px;
-        }
-        #midTxt:hover {
-            color:#0f0f0f;
-            /* background-color: rgba(255, 255, 255, .6); */
-            transform: translateY(10px);
-        }
-        #midTxt .detail h2{
-            opacity: 0;
-            transition: opacity .6s;
-        }
-        #midTxt .detail ul{
-            opacity: 0;
-            transition: opacity .6s .3s;
-        }
-        #midTxt:hover .detail h2{
-            opacity: 1;
-        }
-        #midTxt:hover .detail ul{
-            opacity: 1;
-        }
-        #bottomTxt{
-            position: absolute;
-            /* width: 34%; */
-            /* left: 66%; */
-            color: rgb(70 70 70);
-            transition: .6s ,color .4s linear;
-            bottom: 10px;
-        }
-        #bottomTxt:hover {
-            /* width: 34%; */
-            color:#0f0f0f;
-            /* background-color: rgba(255, 255, 255, .6); */
-            transform: translateY(10px);
-        }
-        #bottomTxt .detail h2{
-            opacity: 0;
-            transition: opacity .6s;
-        }
-        #bottomTxt .detail ul{
-            opacity: 0;
-            transition: opacity .6s .3s;
-        }
-        #bottomTxt:hover .detail h2{
-            opacity: 1;
-        }
-        #bottomTxt:hover .detail ul{
-            opacity: 1;
-        }
-        .banner-txt .detail{
-            font-size: 10px;
-            font-weight: 300;
-        }
-        .banner-txt h1{
-            font-size: 80px;
-            /* border-bottom: 1px solid #333; */
-            font-weight: 900;
-            /* padding-bottom: 0.3em; */
-            margin-bottom: 0.2em;
-            text-align: center;
-        }
-        .banner-txt small{
-            display: block;
-            font-size: 40px;
-            font-weight: 700;
-        }
-        .banner-txt h2{
-            font-size: 27px;
-            font-weight: 700;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-        .banner-txt ul{
-            opacity: 0;
-            transition: opacity .6s .3s;
-            margin-top: 15px;
-            font-weight: 500;
-            font-size: 2em;
-        }
-        .banner-txt li{
-            margin-left: 27px;
-            margin-top: 5px;
-            list-style: circle;
-        }
-        /* topTxt/bottomTxt分隔線 */
-        .container :nth-child(odd) h1::after{
-            content: "";
-            display: block;
-            width: 0%;
-            height: 2px;
-            margin: 30px 0 10px;
-            background-color: rgb(70 70 70);
-            transition: width .5s .15s;
-        }
-        /* topTxt/bottomTxt分隔線hover */
-        .container :nth-child(odd) .banner-txt:hover h1::after{
-            width: 100%;
-        }
-        /* midTxt分隔線 */
-        .container :nth-child(even) h1::before{
-            content: "";
-            display: block;
-            width: 0%;
-            height: 2px;
-            margin: 30px 0 20px;
-            background-color: rgb(70 70 70);
-            transition: width .5s .15s;
-        }
-        /* midTxt分隔線hover */
-        .container :nth-child(even) .banner-txt:hover h1::before{
-            width: 100%;
-        }
-        .more{
-            position: absolute;
-            /* border: 1px solid #fff; */
-            border-top: 20px solid #fff;
-            border-right: 20px solid #fff;
-            border-bottom: 15px solid rgb(131 131 131 / 50%);
-            border-left: 15px solid rgb(131 131 131 / 50%);
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 0px;
-            /* background: #fff; */
-            /* border-radius: 50%;*/
-            transition: .6s;
-        }
-        .more_container{
-            position: absolute;
-            top: -20px;
-            right: -20px;
-        }
-        .more::before {
-            content: '';
-            position: absolute;
-            justify-items: right;
-            width: 25px;
-            height: 35px;
-            background: linear-gradient(17deg, rgb(84 115 9 / 20%), rgb(255 251 251 / 20%) 50%);
-            /* background: #000; */
-            top: -20px;
-            right: -10px;
-            transition: .6s;
-        }
-        .more:hover{
-            position: absolute;
-            /* border: 1px solid #fff; */
-            border-top: 30px solid #fff;
-            border-right: 30px solid #fff;
-            border-bottom: 20px solid #829d57;
-            border-left: 20px solid #829d57;
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 0px;
-            /* background: #fff; */
-            /* border-radius: 50%;*/
-        }.more:hover::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 49px;
-            background: linear-gradient(17deg, rgb(84 115 9 / 20%), rgb(255 251 251 / 20%) 50%);
-            /* background: #000; */
-            top: -30px;
-            right: -20px;
-        }
-        .more h2{
-            font-size: 1em;
-            position: fixed;
-            right: 1px;
-            top: -2px;
-            color: #949494;
-            transition: .6s;
-        }
-        .more:hover.more h2{
-            font-size: 1.2em;
-            position: fixed;
-            right: 5px;
-            top: 0px;
-            color: #949494;
-        }
-        @media screen and (min-width:900px) {
-            .item{
-                width: 33%;
-            }
-            #bottom_square{
-                width: 34%;
-            }
-        }
-        @media (max-width:900px) and (min-width:340px) {
-            .item{
-                width: 100%;
-            }
-            #bottom_square{
-                width: 100%;
-            }
-            .more h2{
-                position: absolute;
-            }
-            .more:hover.more h2{
-                position: absolute;
-                top: -10px;
-                right: -5px;
-            }
-            @media (max-width:900px) and (min-width:700px){
-                .work_video{
-                    transform: scale(3);
-                }
-            }
-        }
-        @media screen and (max-width:340px) {
-            .item{
-                width: 100%;
-            }
-            #bottom_square{
-                width: 100%;
-            }
-            .banner-txt{
-                font-size: 0.7em;
-            }
-            .banner-txt h1{
-                font-size: 1.5em;
-            }
-            .more h2{
-                position: absolute;
-            }
-            .more:hover.more h2{
-                position: absolute;
-                top: -10px;
-                right: -5px;
-            }
-        }
-    </style>
 </head>
+
 <body>
-    <div class="wrap">
-        <div class="container">
-            <div id="top_square" class="item">
-                <div class="tip">
-                    <span>移動游標看介紹/點擊看更多</span>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <button class="navbar-toggler ms-2 mb-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                <path stroke="rgba(255, 255, 255, 0.7)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+                    d="M4 7h22M4 15h22M4 23h22" />
+            </svg>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">健體端勢</a>
+            <ul class="navbar-nav ms-auto me-5 mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" id="work">作品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tech">技術</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="process">流程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about">關於我們</a>
+                </li>
+                <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="intro">
+            <h1>健體端勢<br>
+                <span>青的走出，鎮壓八方。許青的走出，鎮壓八方。許青的走出，鎮壓八方。許青的走出，鎮壓八健體端勢許青的走出，鎮壓八方。許青的走出，鎮壓八方。許青的走出，鎮壓八方。許青的走出，鎮壓八方。方。</span>
+            </h1>
+            <img src="./resource/exerciseMainaPage.png" alt="product cover">
+        </div>
+    </header>
+    <main>
+        <div class="title" id="mianWork"><span>功能 Function</span></div>
+        <ul>
+            <li class="item">
+                <div class="content">
+                    <ul>
+                        <li class="itemTitle">運動姿勢模型</li>
+                        <li class="itemContent">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
                 </div>
-                <div id="topTxt" class="banner-txt">
-                    <h1>
-                        成品
-                        <small>
-                            WORK
-                        </small>
-                    </h1>
-                    <div class="detail">
-                        <h2>健體端勢—健身運動之姿勢修正與熱量消耗計算</h2>
-                        <ul>
-                            <li>三種姿勢讓使用者進行訓練</li>
-                            <li>語音和文字提示進行姿勢修正</li>
-                            <li>動作計數</li>
-                            <li>消耗熱量計算</li>
-                        </ul>
+                <div class="picture">
+                    <img src="https://picsum.photos/id/684/300/300" alt="">
+                </div>
+            </li>
+            <li class="item_R">
+                <div class="picture_R">
+                    <img src="https://picsum.photos/id/685/600/300" alt="">
+                </div>
+                <div class="content_R">
+                    <ul>
+                        <li class="itemTitle_R">即時修正回饋</li>
+                        <li class="itemContent_R">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item">
+                <div class="content">
+                    <ul>
+                        <li class="itemTitle">訓練成果</li>
+                        <li class="itemContent">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
+                </div>
+                <div class="picture">
+                    <img src="https://picsum.photos/id/684/300/300" alt="">
+                </div>
+            </li>
+        </ul>
+        <div class="title"><span>特色 Feature</span></div>
+        <ul>
+            <li class="item">
+                <div class="content">
+                    <ul>
+                        <li class="itemTitle">體感介面</li>
+                        <li class="itemContent">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
+                </div>
+                <div class="picture">
+                    <img src="https://picsum.photos/id/685/300/300" alt="">
+                </div>
+            </li>
+            <li class="item_R">
+                <div class="picture_R">
+                    <img src="https://picsum.photos/id/684/300/300" alt="">
+                </div>
+                <div class="content_R">
+                    <ul>
+                        <li class="itemTitle_R">登入系統</li>
+                        <li class="itemContent_R">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item">
+                <div class="content">
+                    <ul>
+                        <li class="itemTitle">歷史紀錄</li>
+                        <li class="itemContent">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
+                </div>
+                <div class="picture">
+                    <img src="https://picsum.photos/id/685/300/300" alt="">
+                </div>
+            </li>
+            <li class="item_R">
+                <div class="picture_R">
+                    <img src="https://picsum.photos/id/684/300/300" alt="">
+                </div>
+                <div class="content_R">
+                    <ul>
+                        <li class="itemTitle_R">分析報告</li>
+                        <li class="itemContent_R">運動姿勢模型即時修正回饋
+                            即時修正回饋即時修正即時修正
+                            體感介面即時修正即時修正
+                            訓練成果即時修正
+                            登入系統即時修正即時修正
+                            歷史紀錄即時修正
+                            分析報告即時修正</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="title" id="mainTech"><span>技術 Technology</span></div>
+        <div id="technology">
+            <div class="TechPicture">
+                <img id="Python" src="resource/健體端勢/technology_python.png" alt="">
+            </div>
+            <div class="TechText">
+                <ul>
+                    <li class="TechTitle">Python</li>
+                    <li class="TechContent">運動姿勢模型即時修正回饋
+                        即時修正回饋即時修正即時修正
+                        體感介面即時修正即時修正
+                        訓練成果即時修正
+                        登入系統即時修正即時修正
+                        歷史紀錄即時修正
+                        分析報告即時修正</li>
+                </ul>
+            </div>
+        </div>
+        <div id="technology">
+            <div class="TechPicture">
+                <img id="CV_MP" src="resource/健體端勢/CV&MP.svg" alt="">
+            </div>
+            <div class="TechText">
+                <ul>
+                    <li class="TechTitle">OpenCV + MediaPip</li>
+                    <li class="TechContent">運動姿勢模型即時修正回饋
+                        即時修正回饋即時修正即時修正
+                        體感介面即時修正即時修正
+                        訓練成果即時修正
+                        登入系統即時修正即時修正
+                        歷史紀錄即時修正
+                        分析報告即時修正</li>
+                </ul>
+            </div>
+        </div>
+        <div id="technology">
+            <div class="TechPicture">
+                <img id="ML" src="resource/健體端勢/technology_CNN.png" alt="">
+            </div>
+            <div class="TechText">
+                <ul>
+                    <li class="TechTitle">Machine Learning</li>
+                    <li class="TechContent">運動姿勢模型即時修正回饋
+                        即時修正回饋即時修正即時修正
+                        體感介面即時修正即時修正
+                        訓練成果即時修正
+                        登入系統即時修正即時修正
+                        歷史紀錄即時修正
+                        分析報告即時修正</li>
+                </ul>
+            </div>
+        </div>
+        <div class="title" id="mianProcess"><span>流程 Process</span></div>
+        <div id="process">
+            <div class="ProcessTitle"><span class="number">1. </span>操作流程圖</div>
+            <div class="ProcessPicture">
+                <img id="processImg" src="resource/健體端勢/process2.png" alt="">
+            </div>
+            <div class="ProcessTitle"><span class="number">2. </span>模型流程圖</div>
+            <div class="processContent">
+                <div class="modelTrainingItem" id="processStep1">
+                    <span>Step 1</span><p>蒐集資料</p><span>▼</span>
+                    <div class="modelTrainingItemDetail" id="processDetailStep1">
+                        資料來源分兩大類，主要於多個開放式圖片庫蒐集大量深蹲、橋臀和弓步蹲的動作圖片，次要是團隊成員們自行拍攝的影像作為部分訓練及測試資料。
                     </div>
                 </div>
-            </div>
-            <div id="mid_square" class="item">
-                <video class="work_video" autoplay muted loop>
-                    <source src="./resource/technology_short.mp4" type="video/mp4">
-                </video>
-                <div class="tip">
-                    <span>移動游標看介紹/點擊看更多</span>
-                </div>
-                <div id="midTxt" class="banner-txt">
-                    <div class="detail">
-                        <h2>健體端勢—健身運動之姿勢修正與熱量消耗計算</h2>
-                        <ul>
-                            <li>三種姿勢讓使用者進行訓練</li>
-                            <li>語音和文字提示進行姿勢修正</li>
-                            <li>動作計數</li>
-                            <li>消耗熱量計算</li>
-                        </ul>
-                    </div>
-                    <h1>
-                        技術
-                        <small>
-                            TECHNOLOGY
-                        </small>
-                    </h1>
-                </div>
-            </div>
-            <div id="bottom_square" class="item">
-                <div class="tip">
-                    <span>移動游標看介紹/點擊看更多</span>
-                </div>
-                <div id="bottomTxt" class="banner-txt">
-                    <h1>
-                        流程
-                        <small>
-                            PROCEDURE
-                        </small>
-                    </h1>
-                    <div class="detail">
-                        <h2>健體端勢—健身運動之姿勢修正與熱量消耗計算</h2>
-                        <ul>
-                            <li>三種姿勢讓使用者進行訓練</li>
-                            <li>語音和文字提示進行姿勢修正</li>
-                            <li>動作計數</li>
-                            <li>消耗熱量計算</li>
-                        </ul>
+                <div class="modelTrainingItem" id="processStep2">
+                    <span>Step 2</span><p>整理、分類動作</p><span>▼</span>
+                    <div class="modelTrainingItemDetail" id="processDetailStep2">
+                        為求更精準地預測動作，我們移除雜訊過多的圖片避免機器學習之成效不佳，例如圖片中同時出現兩人以上、背景較複雜、運動器材遮蔽過多人體部位之圖片。在分類的部分我們透過程式自動將圖片分到三動作資料夾中，降低手動分類大量圖片時所耗費的時間。
+                        <div class="pic">
+                            <img src="./resource/健體端勢/noPeople.png">
+                            <img src="./resource/健體端勢/noSeeBoby.png">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="more">
-                <div class="more_container">
-                    <h2>GO</h2>
+                <div class="modelTrainingItem" id="processStep3">
+                    <span>Step 3</span><p>CNN模型訓練</p><span>▼</span>
+                    <div class="modelTrainingItemDetail" id="processDetailStep3">
+                        CNN卷積神經網路相對DNN傳統神經網路保有更高的空間資訊及參數量較少之優勢。我們以三層卷積層和池化層作為整個神經網路架構，以提升模型精確度。最後將訓練完成的權重保存下來，以利後續應用時能夠直接使用。
+                        <div class="pic" id="CNN_structure">
+                            <img src="./resource/健體端勢/CNN_structure.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="modelTrainingItem" id="processStep4">
+                    <span>Step 4</span><p>即時畫面動作訓練</p><span>▼</span>
+                    <div class="modelTrainingItemDetail" id="processDetailStep4">
+                        將權重資訊匯入本系統中，等待鏡頭開啟後可以直接偵測使用者的動作，並即時將結果呈現在系統介面上。
+                        <div class="pic" id="live_training">
+                            <img src="./resource/健體端勢/live_training.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="text-center text-lg-start bg-white text-muted" id="mianAbout">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5 p-4">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            健體端勢
+                        </h4>
+                        <p>
+                            具姿勢修正與熱量消耗計算的一個平易化且機能性十足的健身輔助工具
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            組織
+                        </h4>
+                        <p>
+                            國立屏東大學資訊管理學系
+                        </p>
+                        <p>
+                            指導教授&nbsp:&nbsp蕭文峰&nbsp教授
+                        </p>
+                        <p>
+                            學生&nbsp:</br>曾祺雅、周芊嘉、楊亦琪、廖子綺
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!--Section: Contact v.2-->
+                    <section class="col-md-11 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                        <!--Section heading-->
+                        <h4 class="text-uppercase fw-bold mb-4">Contact us</h4>
+                        <!--Section description-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12 mb-md-0 mb-5">
+                                <!-- <form id="contact-form" name="contact-form" onsubmit="sendEmail(); reset(); return false" method="POST"> -->
+                                <form id="contact-form" name="contact-form" action="https://formsubmit.co/el/dayete"
+                                    method="POST">
+
+                                    <!--Grid row-->
+                                    <div class="row">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <label for="name" class="">Your name</label>
+                                                <input type="text" id="name" name="name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <label for="email" class="">Your email</label>
+                                                <input type="text" id="email" name="email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <div class="col-md-6" style="display: none;">
+                                            <div class="md-form mb-0">
+                                                <label for="subject" class="">Subject</label>
+                                                <input type="text" id="subject" name="subject" class="form-control"
+                                                    value="new contact from 專題網頁">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+
+                                    <!--Grid row-->
+                                    <div class="row">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-12">
+
+                                            <div class="md-form">
+                                                <label for="message">Your message</label>
+                                                <textarea type="text" id="message" name="message" rows="2"
+                                                    class="form-control md-textarea"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+                                    <button class="btn btn-primary mt-3 w-100" type="submit">Send</button>
+
+                                </form>
+
+                                <!-- <div class="text-center text-md-left">
+                                    <a class="btn btn-primary mt-3 w-100" onclick="document.getElementById('contact-form').submit();">Send</a>
+                                </div> -->
+
+                                <div class="status"></div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                    </section>
+                    <!--Section: Contact v.2-->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
+
 </html>
