@@ -27,4 +27,6 @@ $(function(){
         $('html,body').animate({ scrollTop: $("#mianAbout").offset().top}, 200);
     });
 
+    // $(".sendUs").attr("onclick","location.href='https://docs.google.com/forms/d/e/1FAIpQLSfYHhEJ0MRJm9Hoe0mB7fyB60lR0VPbO9H-OR6cddSWIcliKg/viewform?usp=sf_link';");
+
 });
