@@ -273,9 +273,59 @@
                             <!--Grid column-->
                             <div class="col-md-12 mb-md-0 mb-5">
                                 <!-- <form id="contact-form" name="contact-form" onsubmit="sendEmail(); reset(); return false" method="POST"> -->
-                                    <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYHhEJ0MRJm9Hoe0mB7fyB60lR0VPbO9H-OR6cddSWIcliKg/viewform?embedded=true" width="614" height="254" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe> -->
-                                    <!-- <div class="sendUs"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYHhEJ0MRJm9Hoe0mB7fyB60lR0VPbO9H-OR6cddSWIcliKg/viewform?usp=sf_link">想跟我們說...</a></div> -->
-                                    <div class="sendUs">想跟我們說...</div>
+                                <form id="contact-form" name="contact-form" action="https://formsubmit.co/el/dayete"
+                                    method="POST">
+
+                                    <!--Grid row-->
+                                    <div class="row">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <label for="name" class="">Your name</label>
+                                                <input type="text" id="name" name="name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <label for="email" class="">Your email</label>
+                                                <input type="text" id="email" name="email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+
+                                        <div class="col-md-6" style="display: none;">
+                                            <div class="md-form mb-0">
+                                                <label for="subject" class="">Subject</label>
+                                                <input type="text" id="subject" name="subject" class="form-control"
+                                                    value="new contact from 專題網頁">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+
+                                    <!--Grid row-->
+                                    <div class="row">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-12">
+
+                                            <div class="md-form">
+                                                <label for="message">Your message</label>
+                                                <textarea type="text" id="message" name="message" rows="2"
+                                                    class="form-control md-textarea"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+                                    <button class="btn btn-primary mt-3 w-100" type="submit">Send</button>
+
+                                </form>
+
                                 <!-- <div class="text-center text-md-left">
                                     <a class="btn btn-primary mt-3 w-100" onclick="document.getElementById('contact-form').submit();">Send</a>
                                 </div> -->
